@@ -1,0 +1,70 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>@ViewBag.Title - Despensômetro</title>
+    @Styles.Render("~/bundles/materializecss")
+    @Styles.Render("~/bundles/estilo")
+
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav class="teal">
+            <div class="container">
+                <div class="nav-wrapper">
+                    <div class="row">
+                        <div class="col s12">
+                            <a href="" class="brand-logo hide-on-med-and-down">Despensômetro</a>
+                            <ul class="right">
+                                <li><a class="waves-effect waves-light btn-large" href="/Login/Index">Entrar<i class="material-icons right">send</i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+        <div class="parallax-container">
+            <div class="parallax">
+                <img src="~/Imagens/looking_labels.jpg" style="display:block; transform:translate3d(-50%, 603px, 0px)">
+            </div>
+        </div>
+        <div class="section blue-grey">
+
+        </div>
+        <div class="parallax-container">
+            <div class="parallax">
+                <img src="~/Imagens/supermarket.jpg" style="display:block; transform:translate3d(-50%, 603px, 0px)">
+            </div>
+        </div>
+    <footer class="page-footer" style="background-color: #009688;">
+        <div class="row ">
+            <div class="col l6 s12">
+                <h5 class="white-text">Encontre-nos nas redes sociais</h5>
+            </div>
+        </div>
+        <div class="footer-copyright teal lighten-2">
+            <div class="container">
+                <p>@DateTime.Now.Year - Despensômetro </p>
+            </div>
+        </div>
+    </footer>
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/materializejs")
+    <script>
+        $(document).ready(function () {
+            $('.parallax').parallax();
+        });
+    </script>
+    
+    </body>
+</html>

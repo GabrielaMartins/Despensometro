@@ -1,0 +1,325 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="despensometroModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="estoque">
+    <Key>
+      <PropertyRef Name="estoque_id" />
+    </Key>
+    <Property Name="estoque_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="estoque_nome" Type="String" MaxLength="40" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="compartilhavel" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="produto_estoque" Relationship="Self.FK__produto_e__estoq__1BFD2C07" FromRole="estoque" ToRole="produto_estoque" />
+    <NavigationProperty Name="usuario" Relationship="Self.usuario_estoque" FromRole="estoque" ToRole="usuario" />
+  </EntityType>
+  <EntityType Name="fabricante">
+    <Key>
+      <PropertyRef Name="fabricante_id" />
+    </Key>
+    <Property Name="fabricante_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="nome_fabricante" Type="String" MaxLength="80" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="site" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Name="telefone" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="produto" Relationship="Self.FK__produto__fabrica__145C0A3F" FromRole="fabricante" ToRole="produto" />
+  </EntityType>
+  <EntityType Name="ingrediente">
+    <Key>
+      <PropertyRef Name="ingrediente_id" />
+    </Key>
+    <Property Name="ingrediente_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="produto_id" Type="Int32" />
+    <Property Name="ingrediente_nome" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="quantidade_ingrediente" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="produto" Relationship="Self.FK__ingredien__produ__34C8D9D1" FromRole="ingrediente" ToRole="produto" />
+    <NavigationProperty Name="receitaUsuario" Relationship="Self.FK__receitaUs__ingre__37A5467C" FromRole="ingrediente" ToRole="receitaUsuario" />
+  </EntityType>
+  <EntityType Name="listaCompras">
+    <Key>
+      <PropertyRef Name="lista_id" />
+    </Key>
+    <Property Name="lista_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="nome_lista" Type="String" MaxLength="40" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="compartilhavel" Type="Boolean" Nullable="false" />
+    <Property Name="usuario_id" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="listaCompras_produto" Relationship="Self.FK__listaComp__lista__2A4B4B5E" FromRole="listaCompras" ToRole="listaCompras_produto" />
+    <NavigationProperty Name="usuario" Relationship="Self.FK__listaComp__usuar__276EDEB3" FromRole="listaCompras" ToRole="usuario" />
+  </EntityType>
+  <EntityType Name="listaCompras_produto">
+    <Key>
+      <PropertyRef Name="lista_id" />
+      <PropertyRef Name="produto_id" />
+    </Key>
+    <Property Name="lista_id" Type="Int32" Nullable="false" />
+    <Property Name="produto_id" Type="Int32" Nullable="false" />
+    <Property Name="quantidade_produto" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="listaCompras" Relationship="Self.FK__listaComp__lista__2A4B4B5E" FromRole="listaCompras_produto" ToRole="listaCompras" />
+    <NavigationProperty Name="produto" Relationship="Self.FK__listaComp__produ__2B3F6F97" FromRole="listaCompras_produto" ToRole="produto" />
+  </EntityType>
+  <EntityType Name="produto">
+    <Key>
+      <PropertyRef Name="produto_id" />
+    </Key>
+    <Property Name="produto_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="fabricante_id" Type="Int32" Nullable="false" />
+    <Property Name="tipo_id" Type="Int32" />
+    <Property Name="produto_nome" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="produto_peso" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="sabor" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="numero_ean" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="fabricante" Relationship="Self.FK__produto__fabrica__145C0A3F" FromRole="produto" ToRole="fabricante" />
+    <NavigationProperty Name="ingrediente" Relationship="Self.FK__ingredien__produ__34C8D9D1" FromRole="produto" ToRole="ingrediente" />
+    <NavigationProperty Name="listaCompras_produto" Relationship="Self.FK__listaComp__produ__2B3F6F97" FromRole="produto" ToRole="listaCompras_produto" />
+    <NavigationProperty Name="tipo" Relationship="Self.FK__produto__tipo_id__15502E78" FromRole="produto" ToRole="tipo" />
+    <NavigationProperty Name="produto_estoque" Relationship="Self.FK__produto_e__produ__1B0907CE" FromRole="produto" ToRole="produto_estoque" />
+    <NavigationProperty Name="receitaInternet" Relationship="Self.receitaInternet_produto" FromRole="produto" ToRole="receitaInternet" />
+  </EntityType>
+  <EntityType Name="produto_estoque">
+    <Key>
+      <PropertyRef Name="produto_estoque_id" />
+    </Key>
+    <Property Name="produto_estoque_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="produto_id" Type="Int32" Nullable="false" />
+    <Property Name="estoque_id" Type="Int32" Nullable="false" />
+    <Property Name="data_fabricacao" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="data_vencimento" Type="DateTime" Nullable="false" Precision="0" />
+    <NavigationProperty Name="estoque" Relationship="Self.FK__produto_e__estoq__1BFD2C07" FromRole="produto_estoque" ToRole="estoque" />
+    <NavigationProperty Name="produto" Relationship="Self.FK__produto_e__produ__1B0907CE" FromRole="produto_estoque" ToRole="produto" />
+  </EntityType>
+  <EntityType Name="receitaInternet">
+    <Key>
+      <PropertyRef Name="receita_id" />
+    </Key>
+    <Property Name="receita_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="nome_receita" Type="String" MaxLength="40" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="link_receita" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="produto" Relationship="Self.receitaInternet_produto" FromRole="receitaInternet" ToRole="produto" />
+  </EntityType>
+  <EntityType Name="receitaUsuario">
+    <Key>
+      <PropertyRef Name="receita_id" />
+    </Key>
+    <Property Name="receita_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="nome_receita" Type="String" MaxLength="40" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ingrediente_id" Type="Int32" />
+    <Property Name="modo_preparo" Type="String" MaxLength="8000" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="usuario_id" Type="Int32" />
+    <NavigationProperty Name="ingrediente" Relationship="Self.FK__receitaUs__ingre__37A5467C" FromRole="receitaUsuario" ToRole="ingrediente" />
+    <NavigationProperty Name="usuario" Relationship="Self.FK__receitaUs__usuar__38996AB5" FromRole="receitaUsuario" ToRole="usuario" />
+  </EntityType>
+  <EntityType Name="tipo">
+    <Key>
+      <PropertyRef Name="tipo_id" />
+    </Key>
+    <Property Name="tipo_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="categoria_produto" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="perecivel" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="produto" Relationship="Self.FK__produto__tipo_id__15502E78" FromRole="tipo" ToRole="produto" />
+  </EntityType>
+  <EntityType Name="usuario">
+    <Key>
+      <PropertyRef Name="usuario_id" />
+    </Key>
+    <Property Name="usuario_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="nome_usuario" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="login_usuario" Type="String" MaxLength="40" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="senha" Type="String" MaxLength="16" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="listaCompras" Relationship="Self.FK__listaComp__usuar__276EDEB3" FromRole="usuario" ToRole="listaCompras" />
+    <NavigationProperty Name="receitaUsuario" Relationship="Self.FK__receitaUs__usuar__38996AB5" FromRole="usuario" ToRole="receitaUsuario" />
+    <NavigationProperty Name="estoque" Relationship="Self.usuario_estoque" FromRole="usuario" ToRole="estoque" />
+  </EntityType>
+  <Association Name="FK__produto_e__estoq__1BFD2C07">
+    <End Role="estoque" Type="Self.estoque" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="produto_estoque" Type="Self.produto_estoque" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="estoque">
+        <PropertyRef Name="estoque_id" />
+      </Principal>
+      <Dependent Role="produto_estoque">
+        <PropertyRef Name="estoque_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__produto__fabrica__145C0A3F">
+    <End Role="fabricante" Type="Self.fabricante" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="produto" Type="Self.produto" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="fabricante">
+        <PropertyRef Name="fabricante_id" />
+      </Principal>
+      <Dependent Role="produto">
+        <PropertyRef Name="fabricante_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__ingredien__produ__34C8D9D1">
+    <End Role="produto" Type="Self.produto" Multiplicity="0..1" />
+    <End Role="ingrediente" Type="Self.ingrediente" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="produto">
+        <PropertyRef Name="produto_id" />
+      </Principal>
+      <Dependent Role="ingrediente">
+        <PropertyRef Name="produto_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__receitaUs__ingre__37A5467C">
+    <End Role="ingrediente" Type="Self.ingrediente" Multiplicity="0..1" />
+    <End Role="receitaUsuario" Type="Self.receitaUsuario" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ingrediente">
+        <PropertyRef Name="ingrediente_id" />
+      </Principal>
+      <Dependent Role="receitaUsuario">
+        <PropertyRef Name="ingrediente_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__listaComp__lista__2A4B4B5E">
+    <End Role="listaCompras" Type="Self.listaCompras" Multiplicity="1" />
+    <End Role="listaCompras_produto" Type="Self.listaCompras_produto" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="listaCompras">
+        <PropertyRef Name="lista_id" />
+      </Principal>
+      <Dependent Role="listaCompras_produto">
+        <PropertyRef Name="lista_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__listaComp__usuar__276EDEB3">
+    <End Role="usuario" Type="Self.usuario" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="listaCompras" Type="Self.listaCompras" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="usuario">
+        <PropertyRef Name="usuario_id" />
+      </Principal>
+      <Dependent Role="listaCompras">
+        <PropertyRef Name="usuario_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__listaComp__produ__2B3F6F97">
+    <End Role="produto" Type="Self.produto" Multiplicity="1" />
+    <End Role="listaCompras_produto" Type="Self.listaCompras_produto" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="produto">
+        <PropertyRef Name="produto_id" />
+      </Principal>
+      <Dependent Role="listaCompras_produto">
+        <PropertyRef Name="produto_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__produto__tipo_id__15502E78">
+    <End Role="tipo" Type="Self.tipo" Multiplicity="0..1" />
+    <End Role="produto" Type="Self.produto" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tipo">
+        <PropertyRef Name="tipo_id" />
+      </Principal>
+      <Dependent Role="produto">
+        <PropertyRef Name="tipo_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__produto_e__produ__1B0907CE">
+    <End Role="produto" Type="Self.produto" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="produto_estoque" Type="Self.produto_estoque" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="produto">
+        <PropertyRef Name="produto_id" />
+      </Principal>
+      <Dependent Role="produto_estoque">
+        <PropertyRef Name="produto_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__receitaUs__usuar__38996AB5">
+    <End Role="usuario" Type="Self.usuario" Multiplicity="0..1" />
+    <End Role="receitaUsuario" Type="Self.receitaUsuario" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="usuario">
+        <PropertyRef Name="usuario_id" />
+      </Principal>
+      <Dependent Role="receitaUsuario">
+        <PropertyRef Name="usuario_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="receitaInternet_produto">
+    <End Role="produto" Type="Self.produto" Multiplicity="*" />
+    <End Role="receitaInternet" Type="Self.receitaInternet" Multiplicity="*" />
+  </Association>
+  <Association Name="usuario_estoque">
+    <End Role="estoque" Type="Self.estoque" Multiplicity="*" />
+    <End Role="usuario" Type="Self.usuario" Multiplicity="*" />
+  </Association>
+  <EntityContainer Name="despensometroEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="estoque" EntityType="Self.estoque" />
+    <EntitySet Name="fabricante" EntityType="Self.fabricante" />
+    <EntitySet Name="ingrediente" EntityType="Self.ingrediente" />
+    <EntitySet Name="listaCompras" EntityType="Self.listaCompras" />
+    <EntitySet Name="listaCompras_produto" EntityType="Self.listaCompras_produto" />
+    <EntitySet Name="produto" EntityType="Self.produto" />
+    <EntitySet Name="produto_estoque" EntityType="Self.produto_estoque" />
+    <EntitySet Name="receitaInternet" EntityType="Self.receitaInternet" />
+    <EntitySet Name="receitaUsuario" EntityType="Self.receitaUsuario" />
+    <EntitySet Name="tipo" EntityType="Self.tipo" />
+    <EntitySet Name="usuario" EntityType="Self.usuario" />
+    <AssociationSet Name="FK__produto_e__estoq__1BFD2C07" Association="Self.FK__produto_e__estoq__1BFD2C07">
+      <End Role="estoque" EntitySet="estoque" />
+      <End Role="produto_estoque" EntitySet="produto_estoque" />
+    </AssociationSet>
+    <AssociationSet Name="FK__produto__fabrica__145C0A3F" Association="Self.FK__produto__fabrica__145C0A3F">
+      <End Role="fabricante" EntitySet="fabricante" />
+      <End Role="produto" EntitySet="produto" />
+    </AssociationSet>
+    <AssociationSet Name="FK__ingredien__produ__34C8D9D1" Association="Self.FK__ingredien__produ__34C8D9D1">
+      <End Role="produto" EntitySet="produto" />
+      <End Role="ingrediente" EntitySet="ingrediente" />
+    </AssociationSet>
+    <AssociationSet Name="FK__receitaUs__ingre__37A5467C" Association="Self.FK__receitaUs__ingre__37A5467C">
+      <End Role="ingrediente" EntitySet="ingrediente" />
+      <End Role="receitaUsuario" EntitySet="receitaUsuario" />
+    </AssociationSet>
+    <AssociationSet Name="FK__listaComp__lista__2A4B4B5E" Association="Self.FK__listaComp__lista__2A4B4B5E">
+      <End Role="listaCompras" EntitySet="listaCompras" />
+      <End Role="listaCompras_produto" EntitySet="listaCompras_produto" />
+    </AssociationSet>
+    <AssociationSet Name="FK__listaComp__usuar__276EDEB3" Association="Self.FK__listaComp__usuar__276EDEB3">
+      <End Role="usuario" EntitySet="usuario" />
+      <End Role="listaCompras" EntitySet="listaCompras" />
+    </AssociationSet>
+    <AssociationSet Name="FK__listaComp__produ__2B3F6F97" Association="Self.FK__listaComp__produ__2B3F6F97">
+      <End Role="produto" EntitySet="produto" />
+      <End Role="listaCompras_produto" EntitySet="listaCompras_produto" />
+    </AssociationSet>
+    <AssociationSet Name="FK__produto__tipo_id__15502E78" Association="Self.FK__produto__tipo_id__15502E78">
+      <End Role="tipo" EntitySet="tipo" />
+      <End Role="produto" EntitySet="produto" />
+    </AssociationSet>
+    <AssociationSet Name="FK__produto_e__produ__1B0907CE" Association="Self.FK__produto_e__produ__1B0907CE">
+      <End Role="produto" EntitySet="produto" />
+      <End Role="produto_estoque" EntitySet="produto_estoque" />
+    </AssociationSet>
+    <AssociationSet Name="FK__receitaUs__usuar__38996AB5" Association="Self.FK__receitaUs__usuar__38996AB5">
+      <End Role="usuario" EntitySet="usuario" />
+      <End Role="receitaUsuario" EntitySet="receitaUsuario" />
+    </AssociationSet>
+    <AssociationSet Name="receitaInternet_produto" Association="Self.receitaInternet_produto">
+      <End Role="produto" EntitySet="produto" />
+      <End Role="receitaInternet" EntitySet="receitaInternet" />
+    </AssociationSet>
+    <AssociationSet Name="usuario_estoque" Association="Self.usuario_estoque">
+      <End Role="estoque" EntitySet="estoque" />
+      <End Role="usuario" EntitySet="usuario" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

@@ -1,0 +1,145 @@
+﻿@model Despensometro2.Models.produto
+
+@{
+    ViewBag.Title = "Adicionar Produto";
+}
+
+@{ 
+    var categorias = ViewBag.categorias;
+}
+
+<div class="parallax-container" style="height:200px;">
+    <div class="section no-pad-bot center">
+        <h2 class="teal-text">Adicionar Produtos</h2>
+    </div>
+    <div class="parallax">
+        <img src="~/Imagens/looking_labels.jpg" style="display:block; transform:translate3d(-50%, 603px, 0px)">
+    </div>
+</div>
+<div class="section white">
+    <div class="card-panel z-depth-3" style="padding: 0px">
+    </div>
+    <div class="row">
+        <div class="col s12">
+            <div class="container">
+                <div class="row">
+
+                        <div class="card hoverable white">
+                            <div class="card-content">
+                                <span class="card-title teal-text form">Novo Produto</span>
+                                <div class="row">
+                                        <div class="input-field col s12 l6 m6">
+                                            <input placeholder="Ex.: Leite Ninho" id="produto_nome" type="text">
+                                            <label for="produto_nome">Nome do Produto</label>
+                                        </div>
+                                        <div class="input-field col s12 l6 m6">
+                                            <input placeholder="Ex.: Nestlé" id="produto_fabricante" type="text">
+                                            <label for="produto_fabricante">Nome do Fabricante</label>
+                                        </div>
+                                    </div>
+                                <div class="row">
+                                    <div class="input-field col s12 l6 m6">
+                                        <select id="select">
+                                            <option value="" disabled selected>Escolha uma categoria</option>
+                                            @{ var cont = 0; }
+                                            @foreach (var categoria in categorias)
+                                            {
+                                                <option value="cont">@categoria.categoria_produto</option>
+                                                cont++;
+                                            }
+                                            
+                                        </select>
+                                        <label>Categoria</label>
+                                    </div>
+                                    <div class="input-field col s12 l6 m6">
+                                        <input placeholder="Ex.: Limão" id="produto_sabor" type="text">
+                                        <label for="produto_sabor">Sabor</label>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                        <div class="input-field col s12 l6 m6">
+                                            <input placeholder="Ex.: 50g" id="produto_peso" type="text" class="validate">
+                                            <label for="produto_peso">Peso</label>
+                                        </div>
+                                    <div class="input-field col s12 l6 m6">
+                                        <input placeholder="Ex.: 7891000066201" id="produto_ean" type="text">
+                                        <label for="produto_ean">Número do Código de Barras</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-action">
+                                <div class="row">
+                                    <div class="col s12">
+                                        <div class="col s6 m6 l9">
+                                            <a href="/Produto/Index" class="btn waves-effect waves-light right hide-on-small-and-down red lighten-1" name="action" style="color:#fff">
+                                                Cancelar
+                                                <i class="material-icons right">cancel</i>
+                                            </a>
+                                            <a href="/Produto/Index" class="btn-floating btn-large waves-effect waves-light red lighten-1 hide-on-med-and-up right">
+                                                <i class="material-icons">cancel</i>
+                                            </a>
+                                        </div>
+                                        <div class="col s6 m6 l3">
+                                            <button class="btn waves-effect waves-light left hide-on-small-and-down" type="submit" onclick="submit()" name="action">
+                                                Enviar
+                                                <i class="material-icons right">send</i>
+                                            </button>
+                                            <button class="btn-floating btn-large waves-effect waves-light teal lighten-1 hide-on-med-and-up left">
+                                                <i class="material-icons">send</i>
+                                            </button>
+                                        </div>
+
+                                    </div>
+                                    </div>
+                                </div>
+                            </div>
+                            </div>  
+                        </div>
+                </div>
+            </div>
+        </div>
+<script>
+    $(document).ready(function () {
+        $('.parallax').parallax();
+    });
+    $(document).ready(function () {
+        $('select').material_select();
+    });
+
+    function submit() {
+        var objeto = {
+            produto_nome : $('#produto_nome').val(),
+            produto_fabricante: $('#produto_fabricante').val(),
+            produto_categoria: $('#select option:selected').text(),
+            produto_peso: $('#produto_peso').val(),
+            sabor: $('#produto_sabor').val(),
+            numero_ean : $("#produto_ean").val()         
+        };
+
+        $.ajax({
+            type: "POST",
+            url: '/Produto/AdicionarProduto',
+            datatype: 'json',
+            data: objeto,
+            success: function (data) {
+                if (data) {
+                    $(':input').val("");
+
+                    $('#select').removeAttr('selected').val('').attr('selected', true);;
+
+                    Materialize.toast("Novo produto cadastrado com sucesso :)", 5000);
+                } else {
+                    Materialize.toast("O produto não pode ser cadastrado :(", 5000);
+                }
+            }
+        });
+    }
+   
+</script>
+
+
+
+
+
+
+

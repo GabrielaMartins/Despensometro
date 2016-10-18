@@ -1,0 +1,185 @@
+﻿@model List<Despensometro2.Models.produto>
+
+    @{ViewBag.Title = "Produto";}
+    @Scripts.Render("~/bundles/filtra")
+  
+
+    <div class="parallax-container" style="height:200px;">
+        <div class="section no-pad-bot center">
+            <h1 class="teal-text">Produtos </h1>
+        </div>
+        <div class="parallax">
+            <img src="~/Imagens/looking_labels.jpg" style="display:block; transform:translate3d(-50%, 603px, 0px)">
+         </div>
+    </div>
+    <div class="section white">
+        <div class="row z-depth-3" id="search" style="padding: 0px;">
+            <div class="row">
+                <div class="col s12">
+                    <div class="col s12 m6 l6 offset-l3 offset-m3">
+                        <div class="input-field">
+                            <i class="material-icons prefix">search</i>
+                            <input id="icon_prefix" onkeyup="filtra()" type="text" class="tooltipped" data-position="top" data-delay="50" data-tooltip="Procure por produtos">
+                            <label for="icon_prefix">Produto</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card-panel center-align">
+            <a href="/Produto/AdicionarProduto" class="waves-effect waves-light btn tooltipped" data-position="top" data-delay="50" data-tooltip="Adicione um novo produto"><i class="material-icons left">add</i>Adicionar Produto</a>
+        </div>
+            <div class="row">
+                <div class="container">
+                    <table class="striped responsive-table z-depth-5 centered">
+                        <thead>
+                            <tr>
+                                <th data-field="nome">Produto<i class="material-icons left-align">arrow_drop_down</i></th>
+                                <th data-field="peso">Peso</th>
+                                <th data-field="sabor">Sabor</th>
+                                <th data-field="fabricante">Fabricante<i class="material-icons left-align">arrow_drop_down</i></th>
+                                <th data-field="ean">Código de Barras</th>
+                                <th data-field="tipo">Categoria</th>
+                                <th data-field="perecibilidade">Perecível?</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+
+                            @foreach (var p in Model)
+                            {
+                                <tr>
+                                    <td>
+                                        @if (p.produto_nome == null)
+                                        {
+                                            <p> - </p>
+                                        }
+                                        else
+                                        {
+                                            @Html.DisplayFor(x => p.produto_nome)
+                                        }
+
+                                    </td>
+                                    <td>
+                                        @if (p.produto_peso == null)
+                                        {
+                                            <p> - </p>
+                                        }
+                                        else
+                                        {
+                                            @Html.DisplayFor(x => p.produto_peso)
+                                        }
+                                    </td>
+                                    <td>
+                                        @if (p.sabor == null)
+                                        {
+                                            <p> - </p>
+                                        }
+                                        else
+                                        {
+                                            @Html.DisplayFor(x => p.sabor)
+                                        }
+
+                                    </td>
+                                    <td>
+                                        @if (p.fabricante.nome_fabricante == null)
+                                        {
+                                            <p> - </p>
+                                        }
+                                        else
+                                        {
+                                            @Html.DisplayFor(x => p.fabricante.nome_fabricante)
+                                        }
+
+                                    </td>
+                                    <td>
+                                        @if (p.numero_ean == null)
+                                        {
+                                            <p> - </p>
+                                        }
+                                        else
+                                        {
+                                            @Html.DisplayFor(x => p.numero_ean)
+                                        }
+
+                                    </td>
+                                    <td>
+                                        @if (p.tipo == null || p.tipo.categoria_produto == null)
+                                        {
+                                            <p> - </p>
+                                        }
+                                        else
+                                        {
+                                            @Html.DisplayFor(x => p.tipo.categoria_produto)
+                                        }
+                                    </td>
+                                    <td>
+                                        @if (p.tipo == null)
+                                        {
+                                            <p> - </p>
+                                        }
+                                        else
+                                        {
+                                            if (p.tipo.perecivel == true)
+                                            {
+                                                <p> Sim </p>
+                                            }
+                                            else
+                                            {
+                                                <p> Não </p>
+                                            }
+                                        }
+
+                                    </td>
+                                    <td>
+                                        <a class="btn-floating red"><i class="material-icons tooltipped" data-position="top" data-delay="50" data-tooltip="Adicione produtos ao estoque">shopping_basket</i></a>
+                                    </td>
+                                    <td>
+                                        <a href="/Produto/EditarProduto/@p.produto_id" class="btn-floating blue lighten-1 darken-1"><i class="material-icons tooltipped" data-position="top" data-delay="50" data-tooltip="Edite produto">mode_edit</i></a>
+                                    </td>
+                                    <td>
+                                        <a class="btn-floating"><i class="material-icons tooltipped" data-position="top" data-delay="50" data-tooltip="Delete produto">delete</i></a>
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                    <div class="row">
+                        <div class="col s12 m8 l8 offset-l3 offset-m2">
+                            <ul class="pagination">
+                                <li class="disabled"><a href="#!"><i class="material-icons">chevron_left</i></a></li>
+                                <li class="active"><a href="#!">1</a></li>
+                                <li class="waves-effect"><a href="#!">2</a></li>
+                                <li class="waves-effect"><a href="#!">3</a></li>
+                                <li class="waves-effect"><a href="#!">4</a></li>
+                                <li class="waves-effect"><a href="#!">5</a></li>
+                                <li class="waves-effect"><a href="#!"><i class="material-icons">chevron_right</i></a></li>
+                            </ul>
+                        </div>
+                        
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    <script>
+        $(document).ready(function () {
+            $('.parallax').parallax();
+        });
+        
+        $(document).ready(function () {
+            var elementPosition = $('#search').offset();
+
+            $(window).scroll(function () {
+                if ($(window).scrollTop() > elementPosition.top) {
+                    $('#search').css('position', 'fixed').css('top', '0');
+                    $('#search').css('z-index', '5').css('width', '100%').css('background-color', '#FFF');
+                } else {
+                    $('#search').css('position', 'relative');
+                }
+            });
+        });
+        
+    </script>
+

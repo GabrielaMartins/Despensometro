@@ -1,0 +1,27 @@
+﻿body {
+    margin: 0;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+.body-content.main{
+    flex: 1 0 auto;
+}
+
+a.criarConta{
+    font-size: 10px; 
+    color: #0D799E !important;
+    transition: color .3s ease !important;
+}
+
+a.criarConta:hover, a.criarConta:active{
+    color:#7CCEEA !important;
+}
+
+footer.page-footer {
+    margin-top: 0px !important;
+}
+
+
+

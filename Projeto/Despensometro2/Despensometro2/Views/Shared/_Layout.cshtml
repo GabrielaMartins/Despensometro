@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>@ViewBag.Title - Despensômetro</title>
+    @Styles.Render("~/bundles/estilo")
+    @Styles.Render("~/bundles/materializecss")
+    @Scripts.Render("~/bundles/modernizr")
+    @Scripts.Render("~/bundles/jquery")
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <ul id="estoques" class="dropdown-content">
+            <li><a href="#!">Ver Estoques</a></li>
+            <li><a href="#!">Novo Estoque</a></li>
+        </ul>
+        <ul id="produtos" class="dropdown-content">
+            <li><a href="/Produto/Index">Ver Produtos</a></li>
+            <li><a href="#!">Novo Produto</a></li>
+        </ul>
+        <nav>
+            <div class="nav-wrapper teal">
+                <a href="/Home/Index" class="brand-logo">Despensômetro</a>
+                <ul class="right hide-on-med-and-down">
+                    <li><a href="/Estoque/Index">Produtos Em Vencimento</a></li>
+                    <li><a class="dropdown-button" href="#!" data-activates="estoques">Estoques<i class="material-icons right">arrow_drop_down</i></a></li>
+                    <li><a class="dropdown-button" href="#!" data-activates="produtos">Produtos<i class="material-icons right">arrow_drop_down</i></a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <div class="body-content main">
+        @RenderBody()
+    </div>
+    <footer class="page-footer" style="background-color: #009688;">
+        <div class="row">
+            <div class="col l6 s12">
+                <span class="white-text">Encontre-nos nas redes sociais</span>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <div class="container">
+                <p>@DateTime.Now.Year - Despensômetro </p>
+            </div>
+        </div>
+    </footer>
+    @Scripts.Render("~/bundles/materializejs")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

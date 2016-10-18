@@ -1,0 +1,120 @@
+C:\Users\gabriela.OPUS\Documents\Visual Studio 2013\Projects\Despensometro2\Despensometro2\bin\Despensometro2.dll.config
+C:\Users\gabriela.OPUS\Documents\Visual Studio 2013\Projects\Despensometro2\Despensometro2\bin\Despensometro2.dll
+C:\Users\gabriela.OPUS\Documents\Visual Studio 2013\Projects\Despensometro2\Despensometro2\bin\Despensometro2.pdb
+C:\Users\gabriela.OPUS\Documents\Visual Studio 2013\Projects\Despensometro2\Despensometro2\bin\Antlr3.Runtime.dll
+C:\Users\gabriela.OPUS\Documents\Visual Studio 2013\Projects\Despensometro2\Despensometro2\bin\EntityFramework.dll
+C:\Users\gabriela.OPUS\Documents\Visual Studio 2013\Projects\Despensometro2\Despensometro2\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\gabriela.OPUS\Documents\Visual Studio 2013\Projects\Despensometro2\Despensometro2\bin\Newtonsoft.Json.dll
+C:\Users\gabriela.OPUS\Documents\Visual Studio 2013\Projects\Despensometro2\Despensometro2\bin\nunit.framework.dll
+C:\Users\gabriela.OPUS\Documents\Visual Studio 2013\Projects\Despensometro2\Despensometro2\bin\System.Web.Helpers.dll
+C:\Users\gabriela.OPUS\Documents\Visual Studio 2013\Projects\Despensometro2\Despensometro2\bin\System.Web.Mvc.dll
+C:\Users\gabriela.OPUS\Documents\Visual Studio 2013\Projects\Despensometro2\Despensometro2\bin\System.Web.Optimization.dll
+C:\Users\gabriela.OPUS\Documents\Visual Studio 2013\Projects\Despensometro2\Despensometro2\bin\System.Web.Razor.dll
+C:\Users\gabriela.OPUS\Documents\Visual Studio 2013\Projects\Despensometro2\Despensometro2\bin\System.Web.WebPages.Deployment.dll
+C:\Users\gabriela.OPUS\Documents\Visual Studio 2013\Projects\Despensometro2\Despensometro2\bin\System.Web.WebPages.dll
+C:\Users\gabriela.OPUS\Documents\Visual Studio 2013\Projects\Despensometro2\Despensometro2\bin\System.Web.WebPages.Razor.dll
+C:\Users\gabriela.OPUS\Documents\Visual Studio 2013\Projects\Despensometro2\Despensometro2\bin\WebGrease.dll
+C:\Users\gabriela.OPUS\Documents\Visual Studio 2013\Projects\Despensometro2\Despensometro2\bin\EntityFramework.xml
+C:\Users\gabriela.OPUS\Documents\Visual Studio 2013\Projects\Despensometro2\Despensometro2\bin\nunit.framework.xml
+C:\Users\gabriela.OPUS\Documents\Visual Studio 2013\Projects\Despensometro2\Despensometro2\bin\System.Web.Helpers.xml
+C:\Users\gabriela.OPUS\Documents\Visual Studio 2013\Projects\Despensometro2\Despensometro2\bin\System.Web.Mvc.xml
+C:\Users\gabriela.OPUS\Documents\Visual Studio 2013\Projects\Despensometro2\Despensometro2\bin\System.Web.Optimization.xml
+C:\Users\gabriela.OPUS\Documents\Visual Studio 2013\Projects\Despensometro2\Despensometro2\bin\System.Web.Razor.xml
+C:\Users\gabriela.OPUS\Documents\Visual Studio 2013\Projects\Despensometro2\Despensometro2\bin\System.Web.WebPages.xml
+C:\Users\gabriela.OPUS\Documents\Visual Studio 2013\Projects\Despensometro2\Despensometro2\bin\System.Web.WebPages.Deployment.xml
+C:\Users\gabriela.OPUS\Documents\Visual Studio 2013\Projects\Despensometro2\Despensometro2\bin\System.Web.WebPages.Razor.xml
+C:\Users\gabriela.OPUS\Documents\Visual Studio 2013\Projects\Despensometro2\Despensometro2\bin\Newtonsoft.Json.xml
+C:\Users\gabriela.OPUS\Documents\Visual Studio 2013\Projects\Despensometro2\Despensometro2\bin\Antlr3.Runtime.pdb
+C:\Users\gabriela.OPUS\Documents\Visual Studio 2013\Projects\Despensometro2\Despensometro2\obj\Debug\Despensometro2.csprojResolveAssemblyReference.cache
+C:\Users\gabriela.OPUS\Documents\Visual Studio 2013\Projects\Despensometro2\Despensometro2\obj\Debug\Despensometro2.dll
+C:\Users\gabriela.OPUS\Documents\Visual Studio 2013\Projects\Despensometro2\Despensometro2\obj\Debug\Despensometro2.pdb
+C:\Users\gabriela.OPUS\Dropbox\Despensometro2\Despensometro2\bin\Despensometro2.dll.config
+C:\Users\gabriela.OPUS\Dropbox\Despensometro2\Despensometro2\bin\Despensometro2.dll
+C:\Users\gabriela.OPUS\Dropbox\Despensometro2\Despensometro2\bin\Despensometro2.pdb
+C:\Users\gabriela.OPUS\Dropbox\Despensometro2\Despensometro2\bin\Antlr3.Runtime.dll
+C:\Users\gabriela.OPUS\Dropbox\Despensometro2\Despensometro2\bin\EntityFramework.dll
+C:\Users\gabriela.OPUS\Dropbox\Despensometro2\Despensometro2\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\gabriela.OPUS\Dropbox\Despensometro2\Despensometro2\bin\Newtonsoft.Json.dll
+C:\Users\gabriela.OPUS\Dropbox\Despensometro2\Despensometro2\bin\nunit.framework.dll
+C:\Users\gabriela.OPUS\Dropbox\Despensometro2\Despensometro2\bin\System.Web.Helpers.dll
+C:\Users\gabriela.OPUS\Dropbox\Despensometro2\Despensometro2\bin\System.Web.Mvc.dll
+C:\Users\gabriela.OPUS\Dropbox\Despensometro2\Despensometro2\bin\System.Web.Optimization.dll
+C:\Users\gabriela.OPUS\Dropbox\Despensometro2\Despensometro2\bin\System.Web.Razor.dll
+C:\Users\gabriela.OPUS\Dropbox\Despensometro2\Despensometro2\bin\System.Web.WebPages.Deployment.dll
+C:\Users\gabriela.OPUS\Dropbox\Despensometro2\Despensometro2\bin\System.Web.WebPages.dll
+C:\Users\gabriela.OPUS\Dropbox\Despensometro2\Despensometro2\bin\System.Web.WebPages.Razor.dll
+C:\Users\gabriela.OPUS\Dropbox\Despensometro2\Despensometro2\bin\WebGrease.dll
+C:\Users\gabriela.OPUS\Dropbox\Despensometro2\Despensometro2\bin\EntityFramework.xml
+C:\Users\gabriela.OPUS\Dropbox\Despensometro2\Despensometro2\bin\nunit.framework.xml
+C:\Users\gabriela.OPUS\Dropbox\Despensometro2\Despensometro2\bin\System.Web.Helpers.xml
+C:\Users\gabriela.OPUS\Dropbox\Despensometro2\Despensometro2\bin\System.Web.Mvc.xml
+C:\Users\gabriela.OPUS\Dropbox\Despensometro2\Despensometro2\bin\System.Web.Optimization.xml
+C:\Users\gabriela.OPUS\Dropbox\Despensometro2\Despensometro2\bin\System.Web.Razor.xml
+C:\Users\gabriela.OPUS\Dropbox\Despensometro2\Despensometro2\bin\System.Web.WebPages.xml
+C:\Users\gabriela.OPUS\Dropbox\Despensometro2\Despensometro2\bin\System.Web.WebPages.Deployment.xml
+C:\Users\gabriela.OPUS\Dropbox\Despensometro2\Despensometro2\bin\System.Web.WebPages.Razor.xml
+C:\Users\gabriela.OPUS\Dropbox\Despensometro2\Despensometro2\bin\Newtonsoft.Json.xml
+C:\Users\gabriela.OPUS\Dropbox\Despensometro2\Despensometro2\bin\Antlr3.Runtime.pdb
+C:\Users\gabriela.OPUS\Dropbox\Despensometro2\Despensometro2\obj\Debug\Despensometro2.csprojResolveAssemblyReference.cache
+C:\Users\gabriela.OPUS\Dropbox\Despensometro2\Despensometro2\obj\Debug\Despensometro2.dll
+C:\Users\gabriela.OPUS\Dropbox\Despensometro2\Despensometro2\obj\Debug\Despensometro2.pdb
+C:\Users\Gabs\Desktop\Projeto\Despensometro2\Despensometro2\bin\Despensometro2.dll.config
+C:\Users\Gabs\Desktop\Projeto\Despensometro2\Despensometro2\bin\Despensometro2.dll
+C:\Users\Gabs\Desktop\Projeto\Despensometro2\Despensometro2\bin\Despensometro2.pdb
+C:\Users\Gabs\Desktop\Projeto\Despensometro2\Despensometro2\bin\Antlr3.Runtime.dll
+C:\Users\Gabs\Desktop\Projeto\Despensometro2\Despensometro2\bin\EntityFramework.dll
+C:\Users\Gabs\Desktop\Projeto\Despensometro2\Despensometro2\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Gabs\Desktop\Projeto\Despensometro2\Despensometro2\bin\Newtonsoft.Json.dll
+C:\Users\Gabs\Desktop\Projeto\Despensometro2\Despensometro2\bin\nunit.framework.dll
+C:\Users\Gabs\Desktop\Projeto\Despensometro2\Despensometro2\bin\System.Web.Helpers.dll
+C:\Users\Gabs\Desktop\Projeto\Despensometro2\Despensometro2\bin\System.Web.Mvc.dll
+C:\Users\Gabs\Desktop\Projeto\Despensometro2\Despensometro2\bin\System.Web.Optimization.dll
+C:\Users\Gabs\Desktop\Projeto\Despensometro2\Despensometro2\bin\System.Web.Razor.dll
+C:\Users\Gabs\Desktop\Projeto\Despensometro2\Despensometro2\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Gabs\Desktop\Projeto\Despensometro2\Despensometro2\bin\System.Web.WebPages.dll
+C:\Users\Gabs\Desktop\Projeto\Despensometro2\Despensometro2\bin\System.Web.WebPages.Razor.dll
+C:\Users\Gabs\Desktop\Projeto\Despensometro2\Despensometro2\bin\WebGrease.dll
+C:\Users\Gabs\Desktop\Projeto\Despensometro2\Despensometro2\bin\EntityFramework.xml
+C:\Users\Gabs\Desktop\Projeto\Despensometro2\Despensometro2\bin\nunit.framework.xml
+C:\Users\Gabs\Desktop\Projeto\Despensometro2\Despensometro2\bin\System.Web.Helpers.xml
+C:\Users\Gabs\Desktop\Projeto\Despensometro2\Despensometro2\bin\System.Web.Mvc.xml
+C:\Users\Gabs\Desktop\Projeto\Despensometro2\Despensometro2\bin\System.Web.Optimization.xml
+C:\Users\Gabs\Desktop\Projeto\Despensometro2\Despensometro2\bin\System.Web.Razor.xml
+C:\Users\Gabs\Desktop\Projeto\Despensometro2\Despensometro2\bin\System.Web.WebPages.xml
+C:\Users\Gabs\Desktop\Projeto\Despensometro2\Despensometro2\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Gabs\Desktop\Projeto\Despensometro2\Despensometro2\bin\System.Web.WebPages.Razor.xml
+C:\Users\Gabs\Desktop\Projeto\Despensometro2\Despensometro2\bin\Newtonsoft.Json.xml
+C:\Users\Gabs\Desktop\Projeto\Despensometro2\Despensometro2\bin\Antlr3.Runtime.pdb
+C:\Users\Gabs\Desktop\Projeto\Despensometro2\Despensometro2\obj\Debug\Despensometro2.dll
+C:\Users\Gabs\Desktop\Projeto\Despensometro2\Despensometro2\obj\Debug\Despensometro2.pdb
+C:\Users\gabriela.OPUS\Desktop\Projeto\Despensometro2\Despensometro2\bin\Despensometro2.dll.config
+C:\Users\gabriela.OPUS\Desktop\Projeto\Despensometro2\Despensometro2\bin\Despensometro2.dll
+C:\Users\gabriela.OPUS\Desktop\Projeto\Despensometro2\Despensometro2\bin\Despensometro2.pdb
+C:\Users\gabriela.OPUS\Desktop\Projeto\Despensometro2\Despensometro2\bin\Antlr3.Runtime.dll
+C:\Users\gabriela.OPUS\Desktop\Projeto\Despensometro2\Despensometro2\bin\EntityFramework.dll
+C:\Users\gabriela.OPUS\Desktop\Projeto\Despensometro2\Despensometro2\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\gabriela.OPUS\Desktop\Projeto\Despensometro2\Despensometro2\bin\Newtonsoft.Json.dll
+C:\Users\gabriela.OPUS\Desktop\Projeto\Despensometro2\Despensometro2\bin\nunit.framework.dll
+C:\Users\gabriela.OPUS\Desktop\Projeto\Despensometro2\Despensometro2\bin\System.Web.Helpers.dll
+C:\Users\gabriela.OPUS\Desktop\Projeto\Despensometro2\Despensometro2\bin\System.Web.Mvc.dll
+C:\Users\gabriela.OPUS\Desktop\Projeto\Despensometro2\Despensometro2\bin\System.Web.Optimization.dll
+C:\Users\gabriela.OPUS\Desktop\Projeto\Despensometro2\Despensometro2\bin\System.Web.Razor.dll
+C:\Users\gabriela.OPUS\Desktop\Projeto\Despensometro2\Despensometro2\bin\System.Web.WebPages.Deployment.dll
+C:\Users\gabriela.OPUS\Desktop\Projeto\Despensometro2\Despensometro2\bin\System.Web.WebPages.dll
+C:\Users\gabriela.OPUS\Desktop\Projeto\Despensometro2\Despensometro2\bin\System.Web.WebPages.Razor.dll
+C:\Users\gabriela.OPUS\Desktop\Projeto\Despensometro2\Despensometro2\bin\WebGrease.dll
+C:\Users\gabriela.OPUS\Desktop\Projeto\Despensometro2\Despensometro2\bin\EntityFramework.xml
+C:\Users\gabriela.OPUS\Desktop\Projeto\Despensometro2\Despensometro2\bin\nunit.framework.xml
+C:\Users\gabriela.OPUS\Desktop\Projeto\Despensometro2\Despensometro2\bin\System.Web.Helpers.xml
+C:\Users\gabriela.OPUS\Desktop\Projeto\Despensometro2\Despensometro2\bin\System.Web.Mvc.xml
+C:\Users\gabriela.OPUS\Desktop\Projeto\Despensometro2\Despensometro2\bin\System.Web.Optimization.xml
+C:\Users\gabriela.OPUS\Desktop\Projeto\Despensometro2\Despensometro2\bin\System.Web.Razor.xml
+C:\Users\gabriela.OPUS\Desktop\Projeto\Despensometro2\Despensometro2\bin\System.Web.WebPages.xml
+C:\Users\gabriela.OPUS\Desktop\Projeto\Despensometro2\Despensometro2\bin\System.Web.WebPages.Deployment.xml
+C:\Users\gabriela.OPUS\Desktop\Projeto\Despensometro2\Despensometro2\bin\System.Web.WebPages.Razor.xml
+C:\Users\gabriela.OPUS\Desktop\Projeto\Despensometro2\Despensometro2\bin\Newtonsoft.Json.xml
+C:\Users\gabriela.OPUS\Desktop\Projeto\Despensometro2\Despensometro2\bin\Antlr3.Runtime.pdb
+C:\Users\gabriela.OPUS\Desktop\Projeto\Despensometro2\Despensometro2\obj\Debug\Despensometro2.csprojResolveAssemblyReference.cache
+C:\Users\gabriela.OPUS\Desktop\Projeto\Despensometro2\Despensometro2\obj\Debug\Despensometro2.dll
+C:\Users\gabriela.OPUS\Desktop\Projeto\Despensometro2\Despensometro2\obj\Debug\Despensometro2.pdb
+C:\Users\Gabs\Desktop\Projeto\Despensometro2\Despensometro2\obj\Debug\Despensometro2.csprojResolveAssemblyReference.cache

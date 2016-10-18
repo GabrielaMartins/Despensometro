@@ -1,0 +1,132 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="despensometroModelStoreContainer" CdmEntityContainer="despensometroEntities">
+    <EntitySetMapping Name="estoque">
+      <EntityTypeMapping TypeName="despensometroModel.estoque">
+        <MappingFragment StoreEntitySet="estoque">
+          <ScalarProperty Name="estoque_id" ColumnName="estoque_id" />
+          <ScalarProperty Name="estoque_nome" ColumnName="estoque_nome" />
+          <ScalarProperty Name="compartilhavel" ColumnName="compartilhavel" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="fabricante">
+      <EntityTypeMapping TypeName="despensometroModel.fabricante">
+        <MappingFragment StoreEntitySet="fabricante">
+          <ScalarProperty Name="fabricante_id" ColumnName="fabricante_id" />
+          <ScalarProperty Name="nome_fabricante" ColumnName="nome_fabricante" />
+          <ScalarProperty Name="site" ColumnName="site" />
+          <ScalarProperty Name="telefone" ColumnName="telefone" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ingrediente">
+      <EntityTypeMapping TypeName="despensometroModel.ingrediente">
+        <MappingFragment StoreEntitySet="ingrediente">
+          <ScalarProperty Name="ingrediente_id" ColumnName="ingrediente_id" />
+          <ScalarProperty Name="produto_id" ColumnName="produto_id" />
+          <ScalarProperty Name="ingrediente_nome" ColumnName="ingrediente_nome" />
+          <ScalarProperty Name="quantidade_ingrediente" ColumnName="quantidade_ingrediente" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="listaCompras">
+      <EntityTypeMapping TypeName="despensometroModel.listaCompras">
+        <MappingFragment StoreEntitySet="listaCompras">
+          <ScalarProperty Name="lista_id" ColumnName="lista_id" />
+          <ScalarProperty Name="nome_lista" ColumnName="nome_lista" />
+          <ScalarProperty Name="compartilhavel" ColumnName="compartilhavel" />
+          <ScalarProperty Name="usuario_id" ColumnName="usuario_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="listaCompras_produto">
+      <EntityTypeMapping TypeName="despensometroModel.listaCompras_produto">
+        <MappingFragment StoreEntitySet="listaCompras_produto">
+          <ScalarProperty Name="lista_id" ColumnName="lista_id" />
+          <ScalarProperty Name="produto_id" ColumnName="produto_id" />
+          <ScalarProperty Name="quantidade_produto" ColumnName="quantidade_produto" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="produto">
+      <EntityTypeMapping TypeName="despensometroModel.produto">
+        <MappingFragment StoreEntitySet="produto">
+          <ScalarProperty Name="produto_id" ColumnName="produto_id" />
+          <ScalarProperty Name="fabricante_id" ColumnName="fabricante_id" />
+          <ScalarProperty Name="tipo_id" ColumnName="tipo_id" />
+          <ScalarProperty Name="produto_nome" ColumnName="produto_nome" />
+          <ScalarProperty Name="produto_peso" ColumnName="produto_peso" />
+          <ScalarProperty Name="sabor" ColumnName="sabor" />
+          <ScalarProperty Name="numero_ean" ColumnName="numero_ean" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="produto_estoque">
+      <EntityTypeMapping TypeName="despensometroModel.produto_estoque">
+        <MappingFragment StoreEntitySet="produto_estoque">
+          <ScalarProperty Name="produto_estoque_id" ColumnName="produto_estoque_id" />
+          <ScalarProperty Name="produto_id" ColumnName="produto_id" />
+          <ScalarProperty Name="estoque_id" ColumnName="estoque_id" />
+          <ScalarProperty Name="data_fabricacao" ColumnName="data_fabricacao" />
+          <ScalarProperty Name="data_vencimento" ColumnName="data_vencimento" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="receitaInternet">
+      <EntityTypeMapping TypeName="despensometroModel.receitaInternet">
+        <MappingFragment StoreEntitySet="receitaInternet">
+          <ScalarProperty Name="receita_id" ColumnName="receita_id" />
+          <ScalarProperty Name="nome_receita" ColumnName="nome_receita" />
+          <ScalarProperty Name="link_receita" ColumnName="link_receita" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="receitaUsuario">
+      <EntityTypeMapping TypeName="despensometroModel.receitaUsuario">
+        <MappingFragment StoreEntitySet="receitaUsuario">
+          <ScalarProperty Name="receita_id" ColumnName="receita_id" />
+          <ScalarProperty Name="nome_receita" ColumnName="nome_receita" />
+          <ScalarProperty Name="ingrediente_id" ColumnName="ingrediente_id" />
+          <ScalarProperty Name="modo_preparo" ColumnName="modo_preparo" />
+          <ScalarProperty Name="usuario_id" ColumnName="usuario_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tipo">
+      <EntityTypeMapping TypeName="despensometroModel.tipo">
+        <MappingFragment StoreEntitySet="tipo">
+          <ScalarProperty Name="tipo_id" ColumnName="tipo_id" />
+          <ScalarProperty Name="categoria_produto" ColumnName="categoria_produto" />
+          <ScalarProperty Name="perecivel" ColumnName="perecivel" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="usuario">
+      <EntityTypeMapping TypeName="despensometroModel.usuario">
+        <MappingFragment StoreEntitySet="usuario">
+          <ScalarProperty Name="usuario_id" ColumnName="usuario_id" />
+          <ScalarProperty Name="nome_usuario" ColumnName="nome_usuario" />
+          <ScalarProperty Name="login_usuario" ColumnName="login_usuario" />
+          <ScalarProperty Name="senha" ColumnName="senha" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="receitaInternet_produto" TypeName="despensometroModel.receitaInternet_produto" StoreEntitySet="receitaInternet_produto">
+      <EndProperty Name="produto">
+        <ScalarProperty Name="produto_id" ColumnName="produto_id" />
+      </EndProperty>
+      <EndProperty Name="receitaInternet">
+        <ScalarProperty Name="receita_id" ColumnName="receita_id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="usuario_estoque" TypeName="despensometroModel.usuario_estoque" StoreEntitySet="usuario_estoque">
+      <EndProperty Name="estoque">
+        <ScalarProperty Name="estoque_id" ColumnName="estoque_id" />
+      </EndProperty>
+      <EndProperty Name="usuario">
+        <ScalarProperty Name="usuario_id" ColumnName="usuario_id" />
+      </EndProperty>
+    </AssociationSetMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,92 @@
+﻿@model Despensometro2.Models.usuario
+
+@{
+ViewBag.Title = "Login";
+}
+
+@using (@Html.BeginForm("Entrar", "Login", FormMethod.Post))
+{
+    <div class="row">
+        <div class="col s12 l4 m6 offset-l4 offset-m3">
+            <div class="card card-panel  z-depth-5">
+                <div class="card-content">
+                    <span class="card-title teal-text">Login</span>
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <input id="login" name="login" type="text" class="validate" required="" aria-required="true">
+                            <label for="login" data-error="Login não consta em nossos registros" data-success="Ok">Usuário</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <input id="senha" name="senha" type="password" class="validate" required="" aria-required="true">
+                            <label for="senha" data-error="Senha não conta em nossos registros" data-success="Ok">Senha</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-action">
+                    <div class="row center-align">
+                        <button type="submit" class="waves-effect waves-light btn">Entrar<i class="material-icons right">send</i></button>
+                    </div>
+                    <div class="row center-align">
+                        <a class="criarConta" href="">Ainda não tenho conta</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    @*//http://demo.geekslabs.com/materialize/v3.0/default/form-validation.html
+    <script>
+        $("#formValidate").validate({
+            rules: {
+                uname: {
+                    required: true,
+                    minlength: 5
+                },
+                cemail: {
+                    required: true,
+                    email: true
+                },
+                password: {
+                    required: true,
+                    minlength: 5
+                },
+                cpassword: {
+                    required: true,
+                    minlength: 5,
+                    equalTo: "#password"
+                },
+                curl: {
+                    required: true,
+                    url: true
+                },
+                crole: "required",
+                ccomment: {
+                    required: true,
+                    minlength: 15
+                },
+                cgender: "required",
+                cagree: "required",
+            },
+            //For custom messages
+            messages: {
+                uname: {
+                    required: "Enter a username",
+                    minlength: "Enter at least 5 characters"
+                },
+                curl: "Enter your website",
+            },
+            errorElement: 'div',
+            errorPlacement: function (error, element) {
+                var placement = $(element).data('error');
+                if (placement) {
+                    $(placement).append(error)
+                } else {
+                    error.insertAfter(element);
+                }
+            }
+        });
+    </script>*@
+}
+

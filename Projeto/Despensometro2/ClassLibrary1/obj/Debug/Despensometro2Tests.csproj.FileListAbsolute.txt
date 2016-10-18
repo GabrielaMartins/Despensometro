@@ -1,0 +1,15 @@
+C:\Users\gabriela.OPUS\Documents\Visual Studio 2013\Projects\Despensometro2\ClassLibrary1\bin\Debug\ClassLibrary1.dll
+C:\Users\gabriela.OPUS\Documents\Visual Studio 2013\Projects\Despensometro2\ClassLibrary1\bin\Debug\ClassLibrary1.pdb
+C:\Users\gabriela.OPUS\Documents\Visual Studio 2013\Projects\Despensometro2\ClassLibrary1\obj\Debug\Despensometro2Tests.csprojResolveAssemblyReference.cache
+C:\Users\gabriela.OPUS\Documents\Visual Studio 2013\Projects\Despensometro2\ClassLibrary1\obj\Debug\ClassLibrary1.dll
+C:\Users\gabriela.OPUS\Documents\Visual Studio 2013\Projects\Despensometro2\ClassLibrary1\obj\Debug\ClassLibrary1.pdb
+C:\Users\gabriela.OPUS\Desktop\Projeto\Despensometro2\ClassLibrary1\bin\Debug\ClassLibrary1.dll
+C:\Users\gabriela.OPUS\Desktop\Projeto\Despensometro2\ClassLibrary1\bin\Debug\ClassLibrary1.pdb
+C:\Users\gabriela.OPUS\Desktop\Projeto\Despensometro2\ClassLibrary1\obj\Debug\Despensometro2Tests.csprojResolveAssemblyReference.cache
+C:\Users\gabriela.OPUS\Desktop\Projeto\Despensometro2\ClassLibrary1\obj\Debug\ClassLibrary1.dll
+C:\Users\gabriela.OPUS\Desktop\Projeto\Despensometro2\ClassLibrary1\obj\Debug\ClassLibrary1.pdb
+C:\Users\Gabs\Desktop\Projeto\Despensometro2\ClassLibrary1\bin\Debug\ClassLibrary1.dll
+C:\Users\Gabs\Desktop\Projeto\Despensometro2\ClassLibrary1\bin\Debug\ClassLibrary1.pdb
+C:\Users\Gabs\Desktop\Projeto\Despensometro2\ClassLibrary1\obj\Debug\Despensometro2Tests.csprojResolveAssemblyReference.cache
+C:\Users\Gabs\Desktop\Projeto\Despensometro2\ClassLibrary1\obj\Debug\ClassLibrary1.dll
+C:\Users\Gabs\Desktop\Projeto\Despensometro2\ClassLibrary1\obj\Debug\ClassLibrary1.pdb
